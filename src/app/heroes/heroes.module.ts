@@ -16,6 +16,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
+import { ImagenPipe } from './pipes/imagen.pipe';
+
+
 
 @NgModule({
   declarations: [
@@ -25,12 +28,13 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
     AgregarComponent,
     HeroeComponent,
     HeroeTarjetaComponent,
+    ImagenPipe
   ],
   imports: [
     CommonModule,
     FlexLayoutModule,
-    HeroesRoutingModule,
     MaterialModule,
+    HeroesRoutingModule
   ]
 })
 export class HeroesModule { }
