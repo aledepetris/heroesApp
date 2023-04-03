@@ -2,8 +2,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 // Custom Modules
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { MaterialModule } from '../material/material.module';
 
 // Components
 import { AgregarComponent } from './pages/agregar/agregar.component';
@@ -19,11 +22,13 @@ import { ListadoComponent } from './pages/listado/listado.component';
     HomeComponent,
     BuscarComponent,
     AgregarComponent,
-    HeroeComponent
+    HeroeComponent,
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    FlexLayoutModule,
+    HeroesRoutingModule,
+    MaterialModule,
   ]
 })
 export class HeroesModule { }
