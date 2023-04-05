@@ -16,7 +16,5 @@ export class ImagenPipe implements PipeTransform {
     } else {
       return `assets/heroes/${ heroe.id }.jpg`
     }
-
   }
-
 }
