@@ -50,7 +50,7 @@ export class AgregarComponent implements OnInit {
       .pipe(
         switchMap( ({id}) => this.heroesService.getHeroesPorId( id ))
       )
-      .subscribe( heroe => this.heroe = heroe )
+      .subscribe( heroe => this.heroe = heroe );
   }
 
   guardar() {
@@ -62,7 +62,7 @@ export class AgregarComponent implements OnInit {
       // Editar
       this.heroesService.actualizarHeroe( this.heroe )
         .subscribe( heroe => {
-          console.log('Actualizado:', heroe)
+          console.log('Actualizado:', heroe);
         })
 
     } else {
@@ -76,7 +76,10 @@ export class AgregarComponent implements OnInit {
   }
 
   borrarHeroe() {
-
+    this.heroesService.borrarHereoe( this.heroe.id! )
+      .subscribe( resp => {
+        this.router.navigate(['/heroes']);
+      })
   }
 
 }
